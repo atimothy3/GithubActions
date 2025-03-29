@@ -30,7 +30,7 @@ This is where we have define a workflow that runs a process called `Basic Action
 Replace the contents of the file with the code below
 
 ```yaml
-name: 'Run App <last name>, <first name>'
+name: 'Run App Timothy, Anok'
 
 on: [push, pull_request]
 
