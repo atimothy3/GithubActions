@@ -70,7 +70,7 @@ public class Multiplication
 	[TestMethod]
 	public void Multiply_Invalid_Timothy()
 	{
-		Assert.ThrowsException<FormatException>(() => Program.Multiply("@", "3"));
+		Assert.ThrowsException<FormatException>(() => Program.Multiply("()", "3"));
 		Assert.ThrowsException<FormatException>(() => Program.Multiply("9", "*"));
 		Assert.ThrowsException<FormatException>(() => Program.Multiply("&", "10"));
 	}
