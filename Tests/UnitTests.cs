@@ -63,7 +63,7 @@ public class Multiplication
 	public void Multiply_Valid_Timothy()
 	{
 		Assert.AreEqual(6, Program.Multiply("2", "3"));
-		Assert.AreEqual(20, Program.Multiply("4", "5"));
+		Assert.AreEqual(25, Program.Multiply("5", "5"));
 		Assert.AreEqual(84, Program.Multiply("12", "7"));
 	}
 
