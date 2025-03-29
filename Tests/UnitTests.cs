@@ -99,7 +99,7 @@ public class Division
 	public void Divide_Invalid_Timothy()
 	{
 		Assert.ThrowsException<FormatException>(() => Program.Divide("@", "3")); 
-		Assert.ThrowsException<FormatException>(() => Program.Divide("9", "9")); // failure
+		Assert.ThrowsException<FormatException>(() => Program.Divide("#", ")")); // failure to fixed
 		Assert.ThrowsException<FormatException>(() => Program.Divide("10", "!"));
 	}
 
