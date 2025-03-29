@@ -62,15 +62,15 @@ public class Multiplication
 	[TestMethod]
 	public void Multiply_Valid_Timothy()
 	{
-		Assert.AreEqual(16, Program.Multiply("2", "3"));
-		Assert.AreEqual(20, Program.Multiply("4", "5"));
+		Assert.AreEqual(6, Program.Multiply("2", "3"));
+		Assert.AreEqual(25, Program.Multiply("5", "5"));
 		Assert.AreEqual(84, Program.Multiply("12", "7"));
 	}
 
 	[TestMethod]
 	public void Multiply_Invalid_Timothy()
 	{
-		Assert.ThrowsException<FormatException>(() => Program.Multiply("@", "3"));
+		Assert.ThrowsException<FormatException>(() => Program.Multiply("()", "3"));
 		Assert.ThrowsException<FormatException>(() => Program.Multiply("9", "*"));
 		Assert.ThrowsException<FormatException>(() => Program.Multiply("&", "10"));
 	}
@@ -92,14 +92,14 @@ public class Division
 	{
 		Assert.AreEqual(4, Program.Divide("12", "3"));
 		Assert.AreEqual(3, Program.Divide("9", "3"));
-		Assert.AreEqual(6, Program.Divide("12", "1"));
+		Assert.AreEqual(6, Program.Divide("12", "2"));
 	}
 
 	[TestMethod]
 	public void Divide_Invalid_Timothy()
 	{
 		Assert.ThrowsException<FormatException>(() => Program.Divide("@", "3")); 
-		Assert.ThrowsException<FormatException>(() => Program.Divide("9", "9")); //failure
+		Assert.ThrowsException<FormatException>(() => Program.Divide("#", ")")); // failure to fixed
 		Assert.ThrowsException<FormatException>(() => Program.Divide("10", "!"));
 	}
 
@@ -126,7 +126,7 @@ public class Power
 	[TestMethod]
 	public void Power_Invalid_Timothy()
 	{
-		Assert.ThrowsException<FormatException>(() => Program.Power("7", "6")); 
+		Assert.ThrowsException<FormatException>(() => Program.Power("#", "6")); 
 		Assert.ThrowsException<FormatException>(() => Program.Power("8", "%"));
 		Assert.ThrowsException<FormatException>(() => Program.Power("-", "^"));
 	}
